@@ -8,11 +8,13 @@
         name="Jim Studious"
         phone-number="555 444 3333"
         email-address="jim@localhost.com"
+        is-favourite="1"
       ></friend-contact>
       <friend-contact
         name="Mary Moxie"
         phone-number="555 223 3344"
         email-address="mary@localhost.com"
+        is-favourite="0"
       ></friend-contact>
     </ul>
   </section>
