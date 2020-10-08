@@ -43,6 +43,19 @@ export default {
       // }
     },
   },
+  // DOCUMENTATION: define which custom events your component will emit
+  emits: ['toggle-favourite'],
+  // NOTE: example validation function - give developers warning if they do not pass an expected parameter (id)
+  // emits: {
+  //   'toggle-favourite': function(id) {
+  //     if (id) {
+  //       return true
+  //     } else {
+  //       console.log('Id is missing!')
+  //       return false
+  //     }
+  //   }
+  // },
   data () {
     return {
       detailsAreVisible: false
