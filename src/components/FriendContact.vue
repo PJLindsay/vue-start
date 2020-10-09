@@ -7,6 +7,7 @@
     <li><strong>Phone:</strong> {{ phoneNumber }}</li>
     <li><strong>Email:</strong> {{ emailAddress }}</li>
     </ul>
+    <button @click="deleteContact">Delete</button>
   </li>
 </template>
 <script>
@@ -44,14 +45,14 @@ export default {
     },
   },
   // DOCUMENTATION: define which custom events your component will emit
-  emits: ['toggle-favourite'],
+  emits: ['toggle-favourite', 'delete-contact'],
   // NOTE: example validation function - give developers warning if they do not pass an expected parameter (id)
   // emits: {
   //   'toggle-favourite': function(id) {
   //     if (id) {
   //       return true
   //     } else {
-  //       console.log('Id is missing!')
+  //       console.error('Id is missing!')
   //       return false
   //     }
   //   }
@@ -62,6 +63,9 @@ export default {
     }
   },
   methods: {
+    deleteContact() {
+      this.$emit('delete-contact', this.id)
+    },
     toggleDetails() {
       this.detailsAreVisible = !this.detailsAreVisible
     },
